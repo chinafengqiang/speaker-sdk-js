@@ -1,5 +1,5 @@
 
-var serverUrl = 'api url' //api url
+var serverUrl = 'server url' //server url
 var key = 'your app key'  //your app key
 var secret = 'your app secret' //your app secret
 
@@ -25,14 +25,14 @@ $(function(){
         if (!moneyTest.test($money.val()) || Number($money.val()) > 10000000) {
           return alert('Please enter the correct amount of consumption, maximum amount 10,000,000')
         } else {
-          pay();
+          notify();
         }
       })
 })
 
 
 
-// 签名
+// sign method
 function getSign (data) {
     function paramBuild (param) {
       var keys = []
@@ -60,7 +60,7 @@ function getSign (data) {
     return CryptoJS.HmacSHA1(data,secret).toString().toUpperCase()
   }
   
-  // 获取token
+  // get token 
   function getToken () {
     var data = {
         AppKey: key,
@@ -88,8 +88,8 @@ function getSign (data) {
   }
   
 
-  // 支付
-function pay () {
+  // notify method
+function notify () {
     var data = {
       AppKey: key,
       type: 0,
