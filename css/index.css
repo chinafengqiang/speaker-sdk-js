@@ -1,0 +1,41 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+  background-color: #f2f2f2;
+  height: 100%;
+}
+
+
+input {
+  width: 300px; /* 文本框宽度 */
+  height: 30px; /* 文本框高度 */
+  padding: 5px; /* 文本框内部填充 */
+  margin: 10px; /* 文本框外部边距 */
+  border: 1px solid #ccc; /* 文本框边框 */
+  border-radius: 4px; /* 文本框边框圆角 */
+  font-size: 16px; /* 文本框字体大小 */
+}
+ 
+/* 当文本框获得焦点时的样式 */
+input:focus {
+  border-color: #4A90E2; /* 焦点时的边框颜色 */
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* 焦点时的阴影效果 */
+}
+
+
+button {
+  width: 200px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+button:hover {
+  background-color: #666;
+}
