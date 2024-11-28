@@ -1,7 +1,9 @@
 
-var baseUrl = 'api url' //api url
+var serverUrl = 'api url' //api url
 var key = 'your app key'  //your app key
 var secret = 'your app secret' //your app secret
+
+
 var signMethod = 'HMAC-SHA1'
 var channel = 1
 
@@ -70,7 +72,7 @@ function getSign (data) {
   
     $.ajax({
       type: 'post',
-      url: baseUrl + '/open/auth',
+      url: serverUrl + '/open/auth',
       contentType: 'application/json',
       dataType: 'json',
       data: JSON.stringify(data),
@@ -99,7 +101,7 @@ function pay () {
     data.Sign = getSign(data)
     $.ajax({
       type: 'post',
-      url: baseUrl + '/open/speaker/notify',
+      url: serverUrl + '/open/speaker/notify',
       contentType: 'application/json',
       dataType: 'json',
       data: JSON.stringify(data),
