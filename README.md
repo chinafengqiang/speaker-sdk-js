@@ -16,9 +16,11 @@ Speaker SDK for JavaScript让您不用复杂编程即可访问开放平台开放
 
 
 ```javascript
-var serverUrl = 'api url' //api url
+
+var serverUrl = 'server url' //api server url
 var key = 'your app key'  //your app key
 var secret = 'your app secret' //your app secret
+
 ```
 
 
